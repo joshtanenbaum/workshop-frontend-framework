@@ -6,7 +6,7 @@ Brief motivation here as well as in presentation
 
 ## Overview
 
-Summary of what we're about to do.
+In the first part of this workshop, we'll break down some basic concepts in Vue, a popular frontend framework alternative to React.JS. Next, we'll implement some of those concepts to create an interactive "search" bar.
 
 ## Setup
 
