@@ -253,7 +253,7 @@ Our final search bar looks like this!
 
 *2 questions for the workshop participants to answer (very short answer) when they submit the workshop. These should try to get at something core to the workshop, the what and the why.*
 
-* [ ] 2 reflection questions
+* [ kkk ] 2 reflection questions
 * [ ] 2 reflection questions
 
 
