@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Search and Vue Movies</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  
+  <body>
+    <form id="main" v-cloak>
+      <div class="bar">
+        <input type="text" v-model="searchString" placeholder="Search for a movie" />
+      </div>
+      
+      <ul>
+        <!-- Render a li element for every entry in the computed array. -->
+        <li v-for="movie in movies">
+          <div class="moviecard">
+            <img :src="'https://image.tmdb.org/t/p/w500'+movie.poster_path">
+            <div class="moviedesc">
+              <h1>{{ movie.title }} - <small>{{ movie.original_language }}</small></h1>
+              <p>{{ movie.vote_average }} &#9734;</p>
+            </div>
+          </div>
+        </li>
+      </ul>  
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="main.js"></script>  
+  </body>
+
+</html>
