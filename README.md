@@ -9,7 +9,7 @@ Frontend Frameworks: A better way to develop applications for the web.
 In the first part of this workshop, we'll break down some basic concepts in Vue, a popular frontend framework alternative to React.JS. Next, we'll implement some of those concepts to create an interactive "search" bar that queries an API for a movie database.
 
 ## Setup
-To begin this worksop, clone our repo
+To begin this workshop, clone our repo
 ```bash
 git clone https://github.com/dartmouth-cs52-20S/workshop-frontend-framework.git
 ```
@@ -81,14 +81,30 @@ We created a search bar. Here, the `v-model` property in our html is to bind the
 
 We need to create a function to handle any changes in search input, kind of like event listeners in react. On each change to the input bar, we want to call this function, which will then pass the updated query to the movie database API and save the results to the `data` property of our `Vue` instance.
 
-First, create a `watch` property that is 
+First, create a `watch` property with an empty function that is bound to the `searchString` value. This function, which we'll add to in a second, will be called with the `val` parameter anytime the `searchString` property changes (i.e., when our input value from the search bar changes). And the `val` parameter denotes the value of the `searchString` property.
 
-<details>
- <summary>If you get stuck, take a look here. Your data property should look like this now!</summary>
 ```javascript
 watch: {
     'searchString': function(val){
-        console.log(val);
+    }
+}
+```
+
+Next, we'll call our movie API within this function, with the `val` query. We'll use Axios, a simple and widely-used promise-based HTTP client for API. Basically, you'll want to call `axios.get()`, to which you pass the moviedb URL, updated with your query (https://api.themoviedb.org/3/search/movie?query=YOURVALUEHERE&api_key=dbc0a6d62448554c27b6167ef7dabb1b). Make sure to replace the value in the string before you pass it to axios.get. We suggest using template literals to make your life easier!
+
+Since Axios is promise based, you'll want to take the response from the API and then reassign those results with a line such as that below:
+
+```javascript
+this.movies = response.data.results;
+```
+
+
+<details>
+ <summary>If you got stuck at some point within the `watch` property, take a look here. Your property should look like this now!</summary>
+  
+```javascript
+watch: {
+    'searchString': function(val){
         axios.get(`https://api.themoviedb.org/3/search/movie?query=${val}&api_key=dbc0a6d62448554c27b6167ef7dabb1b`).then(response => {
             this.movies = response.data.results
         });
