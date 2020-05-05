@@ -196,7 +196,7 @@ Your final search bar (with CSS) should look something like this!
 - [ ] How to watch an input element and run a callback function, similar to triggering a function onChange in React.
 - [ ] How to run something on mounted similar to the componentDidMount React lifecycle method
 
-Frontend frameworks facilitate the creation of complex web applications. Choosing which frontend framework to use are decisions that have to be made at the start of any project based on the features of said project.
+Frontend frameworks facilitate the creation of complex web applications. Frontend frameworks can differ in their structure, learning curves, how they manage state, data binding, DOM, and more. Choosing which frontend framework to use are decisions that have to be made at the start of any project based on the features of said project.
 
 ## Reflection
 
