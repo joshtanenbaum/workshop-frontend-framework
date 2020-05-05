@@ -32,7 +32,7 @@ Let's make our script. We'll call it `index.html`. Sounds familiar? Yeah, we are
 ```
 Notice our page title! At the end of this workshop, we'll be able to search and "vue" movies! Haha, get it? Since it's a pun on Vue? Funny, right??? Okay, nevermind.
 
-It is generally best practice to download `Vue` through `npm`. However, since we're trying to avoid making the setup an extra headache for the setup, we will simplify it a bit and include it as a `<script>` element instead. Here, copy the following script inside the `<body>` part. We'll also link in our external main.js file
+It is generally best practice to download `Vue` through `npm`. However, since we're trying to avoid making the setup an extra headache for this workshop, we will simplify it a bit and include it as a `<script>` element instead. Here, copy the following script inside the `<body>` part. We'll also link in our external main.js file
 ```html
 <script src="https://unpkg.com/vue"></script>
 <script src="main.js"></script>
