@@ -66,7 +66,7 @@ Copy this part above into your code, above the `<script>` section:
         <input type="text" v-model="searchString" placeholder="Search for a movie" />
     </div>
 ```
-and also, create a corresponding `searchString` property inside the `data` property of your `Vue` instance. While you're at it, throw in a `movies` property as an empty array. We'll use this to store the movies that we receive back from our API query.
+and also, create a corresponding `searchString` property inside the `data` property of your `Vue` instance. Here, the `v-model` property in our html is to bind the `searchString` in our `Vue` object with the html display. While you're at it, throw in a `movies` property as an empty array. We'll use this to store the movies that we receive back from our API query.
 <details>
  <summary>Your data property should look like this now!</summary>
  
@@ -78,7 +78,7 @@ data: {
  ```
 </details>
 
-We created a search bar. Here, the `v-model` property in our html is to bind the `searchString` in our `Vue` object with the html display.
+We created a search bar. 
 
 #### Next, we need some logic for searching. More specifically, we want to `watch` the input bar for changes so that we know what to search for in the movie database! Where does it happen? If you guessed `watch` property, you are right!
 
@@ -93,7 +93,7 @@ watch: {
 }
 ```
 
-Next, we'll call our movie API within this function, with the `val` query. We'll use Axios, a simple and widely-used promise-based HTTP client for API. Basically, you'll want to call `axios.get()`, to which you pass the moviedb URL, updated with your query (https://api.themoviedb.org/3/search/movie?query=YOURVALUEHERE&api_key=dbc0a6d62448554c27b6167ef7dabb1b). Make sure to replace the value in the string before you pass it to axios.get. We suggest using template literals to make your life easier!
+Next, we'll call our movie API within this function, with the `val` query. We'll use Axios, a simple and widely-used promise-based HTTP client for API. Basically, you'll want to call `axios.get()`, to which you pass the moviedb URL, updated with your query (https://api.themoviedb.org/3/search/movie?query=YOURVALUEHERE&api_key=dbc0a6d62448554c27b6167ef7dabb1b). Make sure to replace the value in the string before you pass it to `axios.get`. We suggest using template literals to make your life easier!
 
 Since Axios is promise based, you'll want to take the response from the API and then reassign those results with a line such as that below:
 
@@ -137,7 +137,7 @@ Pretty amazing! Now, finally, we are trying to add the search result display int
     </ul>
 
 ```
-A couple things you might need to understand. `v-for` is a for loop (for those of you who've taken CS 10, this is what we called for-each in Java). The `:src` is a shorthand for `v-bind:rc`, which associates the `movie.poster_path` value of the src with each given movie.
+A couple things you might need to understand. `v-for` is a for loop (for those of you who've taken CS 10, this is what we called for-each in Java). The `:src` is a shorthand for `v-bind:src`, which associates the `movie.poster_path` value of the src with each given movie.
 
 But wait, it doesn't work yet. Remember we initally named the `Vue` object `#main` in `el`? We need to make a binding for that as well. So add these two lines and put your search bar and display components inside this `form`:
 ```html
