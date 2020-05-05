@@ -45,7 +45,7 @@ const demo = new Vue({
     data: {
 
     },
-    computed: {
+    watch: {
     }
 });
 ```
