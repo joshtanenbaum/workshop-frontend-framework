@@ -200,7 +200,7 @@ Frontend frameworks facilitate the creation of complex web applications. Fronten
 
 ## Reflection
 
-* How do React and Vue differ in how (and where) they handle most of their logic? Do you think that Vue's method of handling logic breaks the separation of Display logic and computational logic?
+* How do React and Vue differ in how (and where) they handle most of their logic?
 * The React analog for the Vue "v-on:click" directive is "onClick" attribute, but what are the React analogs for the Vue directives "v-for",  "v-if", and "v-show"?
 
 ## Resources
