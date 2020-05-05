@@ -6,7 +6,7 @@ Frontend Frameworks: A better way to develop applications for the web.
 
 ## Overview
 
-In the first part of this workshop, we'll break down some basic concepts in Vue, a popular frontend framework alternative to React.JS. Next, we'll implement some of those concepts to create an interactive "search" bar.
+In the first part of this workshop, we'll break down some basic concepts in Vue, a popular frontend framework alternative to React.JS. Next, we'll implement some of those concepts to create an interactive "search" bar that queries an API for a movie database.
 
 ## Setup
 
@@ -26,7 +26,7 @@ Let's make our script. We'll call it `index.html`. Sounds familiar? Yeah, we are
 ```html
 <html>
 <head>
-  <title>Vue API Movie Search</title>
+  <title>Search and Vue Movies</title>
 </head>
 <body>
  
@@ -34,7 +34,7 @@ Let's make our script. We'll call it `index.html`. Sounds familiar? Yeah, we are
 
 </html>
 ```
-It is best practice to download `Vue` through `npm`. However, since we promised to not give you extra headache for the setup, we will keep our promise. Here, copy the following script inside the `<body>` part. We'll also link in our external main.js file
+It is generally best practice to download `Vue` through `npm`. However, since we promised to not give you extra headache for the setup, we will keep our promise. Here, copy the following script inside the `<body>` part. We'll also link in our external main.js file
 ```html
 <script src="https://unpkg.com/vue"></script>
 <script src="main.js"></script>
@@ -58,20 +58,9 @@ We created our new Vue instance, and pass it a configuration object. See the {} 
 2. `data` property: Every Vue instance has a local storage, like a box of variables and properties that it will hold for us and that we can use when coding our app. Data holds a JavaScript object, so we assign it one with the { } syntax. Inside, we place a property.
 3. `watch` property: Remember `Vue` is a reactive framework? This part holds all the logic we'll need for today's workshop. In this case, the `watch` property will call a function when an input changes.
 
-Now, since we are making a searcher to search games, we will preload some game data into our `games` property inside the `data` obejct. Copy the following part into your code:
-```javascript
-        games: [
-            { name: 'Super Mario 64', rating: 4, image:"https://images.all-free-download.com/images/wallpapers_large/super_mario_sunshine_3502.jpg", url:"https://mario.nintendo.com/"},
-            { name: 'The Legend of Zelda Ocarina of Time', rating: 2,image:"https://images.all-free-download.com/images/wallpapers_large/the_legend_of_zelda_10008.jpg", url:"https://www.zelda.com/"},
-            { name: 'Call of Duty', rating: 4,image:"https://images.all-free-download.com/images/wallpapers_large/call_of_duty_black_ops_8025.jpg", url:"https://www.callofduty.com/"},
-            { name: 'Super Smash Bro', rating: 1, image:"https://images.all-free-download.com/images/wallpapers_large/super_smash_bros_wii_u_15483.jpg", url:"https://www.smashbros.com/en_US/"},
-            { name: 'Starcraft', rating: 6,image:"https://images.all-free-download.com/images/wallpapers_large/blizzard_starcraft_2_wallpaper_starcraft_2_games_wallpaper_3133.jpg", url:"https://starcraft2.com/en-us/"},
-            ]
-```
+We'll be searching a movie database using Axios and pulling movie titles, rankings, and images.
 
-This is the database we are searching from. Feel free to change any of the entry, as this little "database" is pretty self-explanatory. However, our team believe the ratings on the games are pretty fair.
-
-But we need to search the games right? We need a search bar. Don't worry, we are not going to need a component. This is not REACT!!
+But we need an element to actually search the database right? We need a search bar. Don't worry, we are not going to need a component. This is not REACT!!
 
 Copy this part above into your code, above the `<script>` section:
 ```html
