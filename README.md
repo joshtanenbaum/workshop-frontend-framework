@@ -60,55 +60,39 @@ But we need an element to actually search the database right? We need a search b
 Copy this part above into your code, above the `<script>` section:
 ```html
     <div class="bar">
-        <input type="text" v-model="searchString" placeholder="Enter your search terms" />
+        <input type="text" v-model="searchString" placeholder="Search for a movie" />
     </div>
 ```
-and also, create a `searchString` property inside the `data` property of your `Vue` instance.
+and also, create a corresponding `searchString` property inside the `data` property of your `Vue` instance. While you're at it, throw in a `movies` property as an empty array. We'll use this to store the movies that we receive back from our API query.
 <details>
  <summary>Your data property should look like this now!</summary>
  
  ```javascript
 data: {
         searchString: "",
-        games: [
-            { name: 'Super Mario 64', rating: 4, image:"https://images.all-free-download.com/images/wallpapers_large/super_mario_sunshine_3502.jpg", url:"https://mario.nintendo.com/"},
-            { name: 'The Legend of Zelda Ocarina of Time', rating: 2,image:"https://images.all-free-download.com/images/wallpapers_large/the_legend_of_zelda_10008.jpg", url:"https://www.zelda.com/"},
-            { name: 'Call of Duty', rating: 4,image:"https://images.all-free-download.com/images/wallpapers_large/call_of_duty_black_ops_8025.jpg", url:"https://www.callofduty.com/"},
-            { name: 'Super Smash Bro', rating: 1, image:"https://images.all-free-download.com/images/wallpapers_large/super_smash_bros_wii_u_15483.jpg", url:"https://www.smashbros.com/en_US/"},
-            { name: 'Starcraft', rating: 6,image:"https://images.all-free-download.com/images/wallpapers_large/blizzard_starcraft_2_wallpaper_starcraft_2_games_wallpaper_3133.jpg", url:"https://starcraft2.com/en-us/"},
-            ]
-
-
+        movies: []
     },
  ```
 </details>
 We created a search bar. Here, the `v-model` property in our html is to bind the `searchString` in our `Vue` oject with the html display.
 
-#### Next, we need some logic for searching. Where does it happen? If you guessed `computed` property, you are right!
+#### Next, we need some logic for searching. More specifically, we want to `watch` the input bar for changes so that we know what to search for in the movie database! Where does it happen? If you guessed `watch` property, you are right!
 
-We need to create a function to handle the search input. Let's call it `filterdGames`. Paste the following code into your `computed` property:
-
+We need to create a function to handle the search input. Paste the following code into your `watch` property:
+<details>
+ <summary>Your data property should look like this now!</summary>
 ```javascript
-filteredGames: function () {
-            let games_array = this.games,
-                searchString = this.searchString;
-
-            if(!searchString){
-                return games_array;
-            }
-
-            searchString = searchString.trim().toLowerCase();
-
-            games_array = games_array.filter(function(item){
-                if(item.name.toLowerCase().indexOf(searchString) !== -1){
-                    return item;
-                }
-            })
-
-            // Return an array with the search result.
-            return games_array;;
+    watch: {
+        'searchString': function(val){
+            console.log(val);
+            axios.get(`https://api.themoviedb.org/3/search/movie?query=${val}&api_key=dbc0a6d62448554c27b6167ef7dabb1b`).then(response => {
+                this.movies = response.data.results
+            });
+            const url = "https://image.tmdb.org/t/p/w500"
         }
+    }
 ```
+</details>
 This part is pretty self-explanatory. But there is a couple things to note: we can access the properties in `data` by simply calling `this.` in any part of the `Vue` object. Pretty amazing! Now, finally, we are trying to add the search result display into our html. We need to iterate the `filteredGames`, which is a list consists of all the search results, and display the content of it(i.e. images, url to the official website, etc). Since this is your first time hanging out with `Vue`, we will give the secret out.
 
 ```html
