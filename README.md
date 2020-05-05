@@ -20,15 +20,18 @@ Yoou are welcome :)
 Let's make our script. We'll call it `index.html`. Sounds familiar? Yeah, we are back to Lecture 1! Let's build out a easy html template:
 ```html
 <html>
-<head>
-  <title>Search and Vue Movies</title>
-</head>
-<body>
- 
-</body>
+  <head>
+    <title>Search and Vue Movies</title>
+  </head>
+  
+  <body>
+
+  </body>
 
 </html>
 ```
+Notice our page title! We can search and "vue" movies! Haha, get it? Since it's a pun on Vue? Funny, right???
+
 It is generally best practice to download `Vue` through `npm`. However, since we promised to not give you extra headache for the setup, we will keep our promise. Here, copy the following script inside the `<body>` part. We'll also link in our external main.js file
 ```html
 <script src="https://unpkg.com/vue"></script>
