@@ -9,16 +9,11 @@ Frontend Frameworks: A better way to develop applications for the web.
 In the first part of this workshop, we'll break down some basic concepts in Vue, a popular frontend framework alternative to React.JS. Next, we'll implement some of those concepts to create an interactive "search" bar that queries an API for a movie database.
 
 ## Setup
-
-Create a new directory for this workshop
+To begin this worksop, clone our repo
 ```bash
-mkdir your-project-name
+git clone https://github.com/dartmouth-cs52-20S/workshop-frontend-framework.git
 ```
-Enter the directory you just made and create these files
-```bash
-cd your-project-name
-touch index.html style.css main.js
-```
+Yoou are welcome :)
 
 ## Step by Step
 
