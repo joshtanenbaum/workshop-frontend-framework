@@ -202,3 +202,4 @@ Your final search bar (with CSS) should look something like this!
 
 * https://tutorialzine.com/2016/03/5-practical-examples-for-learning-vue-js
 * https://dev.to/marinamosti/hands-on-vuejs-for-beginners-part-5--1jbi
+* https://alligator.io/react/live-search-with-axios/
