@@ -22,6 +22,7 @@ Let's make our script. We'll call it `index.html`. Sounds familiar? Yeah, we are
 <html>
   <head>
     <title>Search and Vue Movies</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   
   <body>
