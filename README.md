@@ -200,8 +200,8 @@ Frontend frameworks facilitate the creation of complex web applications. Fronten
 
 ## Reflection
 
-* Would you use a Frontend Framework to make your own personal website? If yes, which one and why?
-* Would you use a Frontend Framework to make a larger web application like your final project? If yes, which one and why?
+* How do React and Vue differ in how (and where) they handle most of their logic? Do you think that Vue's method of handling logic breaks the separation of Display logic and computational logic?
+* The React analog for the Vue "v-on:click" directive is "onClick" attribute, but what are the React analogs for the Vue directives "v-for",  "v-if", and "v-show"?
 
 ## Resources
 
