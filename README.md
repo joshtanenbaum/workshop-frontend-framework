@@ -183,6 +183,11 @@ Your final search bar (with CSS) should look something like this!
 ![](/finalproduct.png)
 
 
+## What you should have at this point
+- [ ] A working search bar linked to themoviedb api
+- [ ] A Vue instance with data, mounted, and watch properties
+- [ ] A v-for loop to display movies
+- [ ] An example of how easy it is to set up a Vue project!
 
 ## Summary / What you Learned
 
