@@ -45,12 +45,12 @@ It is generally best practice to download `Vue` through `npm`. However, since we
 Congratulations! You now have `Vue` framework running in your code. Now, let's add a `Vue` object to our `main.js` file - this is where we'll be putting most of our `Vue` functionality and data:
 ```javascript
 const demo = new Vue({
-    el: '#main',
-    data: {
+  el: '#main',
+  data: {
 
-    },
-    watch: {
-    }
+  },
+  watch: {
+  }
 });
 ```
 What is going on here?
@@ -66,9 +66,9 @@ But we need an element to actually search the database right? We need a search b
 
 Copy this searchbar into your `main` div:
 ```html
-    <div class="bar">
-        <input type="text" v-model="searchString" placeholder="Search for a movie" />
-    </div>
+<div class="bar">
+  <input type="text" v-model="searchString" placeholder="Search for a movie" />
+</div>
 ```
 and also, create a corresponding `searchString` property inside the `data` property of your `Vue` instance. Here, the `v-model` property in our html is to bind the `searchString` in our `Vue` object with the html display. While you're at it, throw in a `movies` property as an empty array. We'll use this to store the movies that we receive back from our API query.
 <details>
@@ -76,9 +76,9 @@ and also, create a corresponding `searchString` property inside the `data` prope
  
  ```javascript
 data: {
-        searchString: "",
-        movies: []
-    },
+  searchString: "",
+  movies: []
+},
  ```
 </details>
 
@@ -92,8 +92,8 @@ First, create a `watch` property with an empty function that is bound to the `se
 
 ```javascript
 watch: {
-    'searchString': function(val){
-    }
+  'searchString': function(val){
+  }
 }
 ```
 
@@ -119,11 +119,11 @@ this.movies = response.data.results;
   
 ```javascript
 watch: {
-    'searchString': function(val){
-        axios.get(`https://api.themoviedb.org/3/search/movie?query=${val}&api_key=dbc0a6d62448554c27b6167ef7dabb1b`).then(response => {
-            this.movies = response.data.results
-        });
-    }
+  'searchString': function(val){
+    axios.get(`https://api.themoviedb.org/3/search/movie?query=${val}&api_key=dbc0a6d62448554c27b6167ef7dabb1b`).then(response => {
+      this.movies = response.data.results
+    });
+  }
 }
 ```
 </details>
@@ -139,11 +139,11 @@ const defaultSearchTerm = 'a';
 Next, inside the `Vue` instance, add a mounted property between the `data` and `watch` properties.
 
 ```javascript
-    mounted() {
-        axios.get(`https://api.themoviedb.org/3/search/movie?query=${defaultSearchTerm}&api_key=dbc0a6d62448554c27b6167ef7dabb1b`).then(response => {
-            this.movies = response.data.results
-        })
-    },
+mounted() {
+  axios.get(`https://api.themoviedb.org/3/search/movie?query=${defaultSearchTerm}&api_key=dbc0a6d62448554c27b6167ef7dabb1b`).then(response => {
+    this.movies = response.data.results
+  })
+},
 ```
 
 #### Now, we need to actually render all this good movie data we pulled from the database!
@@ -151,18 +151,18 @@ Next, inside the `Vue` instance, add a mounted property between the `data` and `
 Pretty amazing! Now, finally, we are trying to add the search result display into our html. We need to iterate the `movies` property, which is a list consisting of all the search results, and display the content of it(i.e. title, images, rating, etc). Since this is your first time hanging out with `Vue`, we'll give the secret out.
 
 ```html
-    <ul>
-        <!-- Render a li element for every entry in the computed array. -->
-        <li v-for="movie in movies">
-            <div class="moviecard">
-                <img :src="'https://image.tmdb.org/t/p/w500'+movie.poster_path">
-                <div class="moviedesc">
-                    <h1>{{ movie.title }} - <small>{{ movie.original_language }}</small></h1>
-                    <p>{{ movie.vote_average }} &#9734;</p>
-                </div>
-            </div>
-        </li>
-    </ul>
+<ul>
+  <!-- Render a li element for every entry in the computed array. -->
+  <li v-for="movie in movies">
+    <div class="moviecard">
+      <img :src="'https://image.tmdb.org/t/p/w500'+movie.poster_path">
+      <div class="moviedesc">
+        <h1>{{ movie.title }} - <small>{{ movie.original_language }}</small></h1>
+        <p>{{ movie.vote_average }} &#9734;</p>
+      </div>
+    </div>
+  </li>
+</ul>
 
 ```
 A couple things you might need to understand. `v-for` is a for loop (for those of you who've taken CS 10, this is what we called for-each in Java). The `:src` is a shorthand for `v-bind:src`, which associates the `movie.poster_path` value of the src with each given movie.
