@@ -30,9 +30,9 @@ Let's make our script. We'll call it `index.html`. Sounds familiar? Yeah, we are
 
 </html>
 ```
-Notice our page title! We can search and "vue" movies! Haha, get it? Since it's a pun on Vue? Funny, right???
+Notice our page title! At the end of this workshop, we'll be able to search and "vue" movies! Haha, get it? Since it's a pun on Vue? Funny, right??? Okay, nevermind.
 
-It is generally best practice to download `Vue` through `npm`. However, since we promised to not give you extra headache for the setup, we will keep our promise. Here, copy the following script inside the `<body>` part. We'll also link in our external main.js file
+It is generally best practice to download `Vue` through `npm`. However, since we're trying to avoid making the setup an extra headache for the setup, we will simplify it a bit and include it as a `<script>` element instead. Here, copy the following script inside the `<body>` part. We'll also link in our external main.js file
 ```html
 <script src="https://unpkg.com/vue"></script>
 <script src="main.js"></script>
@@ -137,12 +137,17 @@ Pretty amazing! Now, finally, we are trying to add the search result display int
     </ul>
 
 ```
-A couple things need to understand. `v-for` is a for loop (for those of you who've taken CS 10, this is what we called for-each in Java).  But wait, it doesn't work yet. Remember we initally named the `Vue` object `#main` in `el`? We need to make a binding for that as well. So add these two lines and put your search bar and display components inside this `form`:
+A couple things you might need to understand. `v-for` is a for loop (for those of you who've taken CS 10, this is what we called for-each in Java). The `:src` is a shorthand for `v-bind:rc`, which associates the `movie.poster_path` value of the src with each given movie.
+
+But wait, it doesn't work yet. Remember we initally named the `Vue` object `#main` in `el`? We need to make a binding for that as well. So add these two lines and put your search bar and display components inside this `form`:
 ```html
 <form id="main" v-cloak>
 </form>
 
 ```
+
+The `v-cloak` syntax just hides the form while it is being mounted - a nice little bonus functionality to Vue.
+
 Now you are ready to go!:sunglasses: 
 
 
