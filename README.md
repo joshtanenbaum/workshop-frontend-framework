@@ -93,7 +93,15 @@ watch: {
 }
 ```
 
-Next, we'll call our movie API within this function, with the `val` query. We'll use Axios, a simple and widely-used promise-based HTTP client for API. Basically, you'll want to call `axios.get()`, to which you pass the moviedb URL, updated with your query (https://api.themoviedb.org/3/search/movie?query=YOURVALUEHERE&api_key=dbc0a6d62448554c27b6167ef7dabb1b). Make sure to replace the value in the string before you pass it to `axios.get`. We suggest using template literals to make your life easier!
+Next, we'll call our movie API within this function, with the `val` query. We'll use Axios, a simple and widely-used promise-based HTTP client for API. 
+
+Throw this line into your index.html along with the other scripts! We'll avoid having to install axios using npm/yarn this way.
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+```
+
+Basically, you'll want to call `axios.get()`, to which you pass the moviedb URL, updated with your query (https://api.themoviedb.org/3/search/movie?query=YOURVALUEHERE&api_key=dbc0a6d62448554c27b6167ef7dabb1b). Make sure to replace the value in the string before you pass it to `axios.get`. We suggest using template literals to make your life easier!
 
 Since Axios is promise based, you'll want to take the response from the API and then reassign those results with a line such as that below:
 
@@ -120,7 +128,7 @@ This part is pretty self-explanatory. Note that we can access the properties in 
 
 #### Now, we need to actually render all this good movie data we pulled from the database!
 
-Pretty amazing! Now, finally, we are trying to add the search result display into our html. We need to iterate the `filteredGames`, which is a list consists of all the search results, and display the content of it(i.e. images, url to the official website, etc). Since this is your first time hanging out with `Vue`, we'll give the secret out.
+Pretty amazing! Now, finally, we are trying to add the search result display into our html. We need to iterate the `movies` property, which is a list consisting of all the search results, and display the content of it(i.e. title, images, rating, etc). Since this is your first time hanging out with `Vue`, we'll give the secret out.
 
 ```html
     <ul>
