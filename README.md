@@ -26,6 +26,9 @@ Let's make our script. We'll call it `index.html`. Sounds familiar? Yeah, we are
   </head>
   
   <body>
+      <div id="main">
+          
+      </div>
 
   </body>
 
