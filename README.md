@@ -6,7 +6,7 @@ Frontend Frameworks: A better way to develop applications for the web.
 
 ## Overview
 
-We'll break down some basic concepts in Vue, a popular frontend framework alternative to React.JS and implement these concepts to create an interactive "search" bar that queries an API for a movie database.
+We'll break down some basic concepts in Vue and implement these concepts to create an interactive "search" bar that queries an API for a movie database.
 
 ## Setup
 To begin this workshop, clone our repo
