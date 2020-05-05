@@ -105,7 +105,7 @@ Throw this line into your index.html along with the other scripts! We'll avoid h
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 ```
 
-Basically, in `watch` you'll want to call `axios.get()`, to which you pass the moviedb URL, updated with your query (https://api.themoviedb.org/3/search/movie?query=YOURVALUEHERE&api_key=dbc0a6d62448554c27b6167ef7dabb1b). Make sure to replace the value in the string before you pass it to `axios.get`. We suggest using template literals to make your life easier!
+Now back to the function in our watch property. Basically, you'll want to call `axios.get()`, to which you pass the moviedb URL, updated with your query (https://api.themoviedb.org/3/search/movie?query=YOURVALUEHERE&api_key=dbc0a6d62448554c27b6167ef7dabb1b). Make sure to replace the value in the string before you pass it to `axios.get`. We suggest using template literals to make your life easier!
 
 Since Axios is promise based, you'll also want to take the response from the API and then reassign the movies array to those results using the line below:
 
