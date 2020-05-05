@@ -60,7 +60,7 @@ We'll be searching a movie database using Axios and pulling movie titles, rankin
 
 But we need an element to actually search the database right? We need a search bar. Don't worry, we are not going to need a component. This is not REACT!!
 
-Copy this part above into your code, above the `<script>` section:
+Copy this searchbar into your `main` div:
 ```html
     <div class="bar">
         <input type="text" v-model="searchString" placeholder="Search for a movie" />
