@@ -99,7 +99,7 @@ watch: {
 
 Next, we'll call our movie API within this function, with the `val` query. We'll use Axios, a simple and widely-used promise-based HTTP client for API. 
 
-Throw this line into your index.html along with the other scripts! We'll avoid having to install axios using npm/yarn this way.
+Throw this line into your index.html BEFORE your other scripts! We'll avoid having to install axios using npm/yarn this way.
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
