@@ -107,12 +107,11 @@ Throw this line into your index.html along with the other scripts! We'll avoid h
 
 Basically, you'll want to call `axios.get()`, to which you pass the moviedb URL, updated with your query (https://api.themoviedb.org/3/search/movie?query=YOURVALUEHERE&api_key=dbc0a6d62448554c27b6167ef7dabb1b). Make sure to replace the value in the string before you pass it to `axios.get`. We suggest using template literals to make your life easier!
 
-Since Axios is promise based, you'll want to take the response from the API and then reassign those results with a line such as that below:
+Since Axios is promise based, you'll want to take the response from the API and then reassign the movies array to those results in `watch` using the line below:
 
 ```javascript
 this.movies = response.data.results;
 ```
-
 
 <details>
  <summary>If you got lost at some point within the `watch` property, take a look here. Your property should look like this now!</summary>
