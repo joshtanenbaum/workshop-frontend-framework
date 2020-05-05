@@ -265,4 +265,5 @@ Our final search bar looks like this!
 
 ## Resources
 
-* cite any resources
+* https://tutorialzine.com/2016/03/5-practical-examples-for-learning-vue-js
+* https://dev.to/marinamosti/hands-on-vuejs-for-beginners-part-5--1jbi
