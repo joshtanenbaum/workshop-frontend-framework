@@ -13,7 +13,7 @@ To begin this workshop, clone our repo
 ```bash
 git clone https://github.com/dartmouth-cs52-20S/workshop-frontend-framework.git
 ```
-Yoou are welcome :)
+You are welcome :)
 
 ## Step by Step
 
