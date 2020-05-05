@@ -5,7 +5,7 @@ body {
 /* Hide un-compiled mustache bindings
 until the Vue instance is ready */
 [v-cloak] {
-display: none;
+    display: none;
 }
 
 *{
