@@ -166,7 +166,7 @@ Pretty amazing! Now, finally, we are trying to add the search result display int
 ```
 A couple things you might need to understand. `v-for` is a for loop (for those of you who've taken CS 10, this is what we called for-each in Java). The `:src` is a shorthand for `v-bind:src`, which associates the `movie.poster_path` value of the src with each given movie.
 
-But wait, it doesn't work yet. Remember we initally named the `Vue` object `#main` in `el`? We need to make a binding for that as well. So add these two lines and put your search bar and display components inside this `form`:
+But wait, it doesn't work yet. Remember we initally named the `Vue` object `#main` in `el`? We need to make a binding for that as well. So change your main `<div>` to a `form` tag and add the attribute `v-cloak`. Like this:
 ```html
 <form id="main" v-cloak>
 </form>
