@@ -100,7 +100,7 @@ this.movies = response.data.results;
 
 
 <details>
- <summary>If you got stuck at some point within the `watch` property, take a look here. Your property should look like this now!</summary>
+ <summary>If you got lost at some point within the `watch` property, take a look here. Your property should look like this now!</summary>
   
 ```javascript
 watch: {
@@ -113,7 +113,11 @@ watch: {
 ```
 </details>
 
-This part is pretty self-explanatory. But there is a couple things to note: we can access the properties in `data` by simply calling `this.` in any part of the `Vue` object. Pretty amazing! Now, finally, we are trying to add the search result display into our html. We need to iterate the `filteredGames`, which is a list consists of all the search results, and display the content of it(i.e. images, url to the official website, etc). Since this is your first time hanging out with `Vue`, we will give the secret out.
+This part is pretty self-explanatory. Note that we can access the properties in `data` by simply calling `this.` in any part of the `Vue` object. 
+
+#### Now, we need to actually render all this good movie data we pulled from the database!
+
+Pretty amazing! Now, finally, we are trying to add the search result display into our html. We need to iterate the `filteredGames`, which is a list consists of all the search results, and display the content of it(i.e. images, url to the official website, etc). Since this is your first time hanging out with `Vue`, we'll give the secret out.
 
 ```html
     <ul>
