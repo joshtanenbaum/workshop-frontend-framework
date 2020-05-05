@@ -6,7 +6,7 @@ Frontend Frameworks: A better way to develop applications for the web.
 
 ## Overview
 
-We'll break down some basic concepts in Vue, a popular frontend framework alternative to React.JS andimplement these concepts to create an interactive "search" bar that queries an API for a movie database.
+We'll break down some basic concepts in Vue, a popular frontend framework alternative to React.JS and implement these concepts to create an interactive "search" bar that queries an API for a movie database.
 
 ## Setup
 To begin this workshop, clone our repo
@@ -191,10 +191,11 @@ Your final search bar (with CSS) should look something like this!
 
 ## Summary / What you Learned
 
-- [] How to create a Vue instance
-- [] A few Vue directives
-- [] How to watch an input element and run a callback function, similar to triggering a function onChange in React.
-- [] How to run something on mounted similar to the componentDidMount React lifecycle method
+- [ ] How to create a Vue instance
+- [ ] A few Vue directives
+- [ ] How to watch an input element and run a callback function, similar to triggering a function onChange in React.
+- [ ] How to run something on mounted similar to the componentDidMount React lifecycle method
+
 Frontend frameworks facilitate the creation of complex web applications. Choosing which frontend framework to use are decisions that have to be made at the start of any project based on the features of said project.
 
 ## Reflection
