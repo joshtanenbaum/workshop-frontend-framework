@@ -191,13 +191,12 @@ Your final search bar (with CSS) should look something like this!
 
 ## Summary / What you Learned
 
-* Frontend Frameworks can be very usefull, but also are not mandatory. Choosing to use a Frontend framework and choosing which frontend framework to use are decisions that have to be made at the start of any project based on the requirments of said project.
+* Frontend Frameworks can be very usefull, but also are not mandatory. Choosing to use a Frontend framework and choosing which frontend framework to use are decisions that have to be made at the start of any project based on the requirements of said project.
 
 ## Reflection
 
 * Would you use a Frontend Framework to make your own personal website? If yes, which one and why?
 * Would you use a Frontend Framework to make a larger web application like your final project? If yes, which one and why?
-
 
 ## Resources
 
