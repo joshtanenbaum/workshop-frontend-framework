@@ -88,7 +88,7 @@ We created a search bar.
 
 We need to create a function to handle any changes in search input, kind of like event listeners in react. On each change to the input bar, we want to call this function, which will then pass the updated query to the movie database API and save the results to the `data` property of our `Vue` instance.
 
-First, create a `watch` property with an empty function that is bound to the `searchString` value. This function, which we'll add to in a second, will be called with the `val` parameter anytime the `searchString` property changes (i.e., when our input value from the search bar changes). And the `val` parameter denotes the value of the `searchString` property.
+First, in your `watch` property create an empty function that is bound to the `searchString` value. This function, which we'll add to in a second, will be called with the `val` parameter anytime the `searchString` property changes (i.e., when our input value from the search bar changes). And the `val` parameter denotes the value of the `searchString` property.
 
 ```javascript
 watch: {
