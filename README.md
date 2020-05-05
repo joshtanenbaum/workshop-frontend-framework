@@ -10,7 +10,15 @@ In the first part of this workshop, we'll break down some basic concepts in Vue,
 
 ## Setup
 
-Any necessary setup steps
+Create a new directory for this workshop
+```bash
+mkdir your-project-name
+```
+Enter the directory you just made and create these files
+```bash
+cd your-project-name
+touch index.html style.css main.js
+```
 
 ## Step by Step
 
