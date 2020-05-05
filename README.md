@@ -26,7 +26,7 @@ Let's make our script. We'll call it `index.html`. Sounds familiar? Yeah, we are
 ```html
 <html>
 <head>
-  <title>Vue Search Bar</title>
+  <title>Vue API Movie Search</title>
 </head>
 <body>
  
@@ -34,12 +34,13 @@ Let's make our script. We'll call it `index.html`. Sounds familiar? Yeah, we are
 
 </html>
 ```
-It is best practice to download `Vue` through `npm`. However, since we promised to not give you extra headache for the setup, we will keep our promise. Here, copy the following script inside the `<body>` part.
+It is best practice to download `Vue` through `npm`. However, since we promised to not give you extra headache for the setup, we will keep our promise. Here, copy the following script inside the `<body>` part. We'll also link in our external main.js file
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script>
+<script src="https://unpkg.com/vue"></script>
+<script src="main.js"></script>
+
 ```
-Congratulations! You now have `Vue` framework running in your code. Now, let's create a `Vue` object under the `<script>` line:
+Congratulations! You now have `Vue` framework running in your code. Now, let's add a `Vue` object to our `main.js` file - this is where we'll be putting most of our `Vue` functionality and data:
 ```javascript
 const demo = new Vue({
     el: '#main',
@@ -53,9 +54,9 @@ const demo = new Vue({
 What is going on here?
 We created our new Vue instance, and pass it a configuration object. See the {} as a parameter?
 
-1. `el`: Here we tell Vue where inside our HTML we want our app to be displayed. In this case, the div with the app id.
+1. `el`: Here we tell Vue where inside our HTML DOM we want our app to be displayed. In this case, the div with the `#main` id.
 2. `data` property: Every Vue instance has a local storage, like a box of variables and properties that it will hold for us and that we can use when coding our app. Data holds a JavaScript object, so we assign it one with the { } syntax. Inside, we place a property.
-3. `computed` property: Remember `Vue` is a reactive framework? This part holds all the computational logic we will need today
+3. `watch` property: Remember `Vue` is a reactive framework? This part holds all the logic we'll need for today's workshop. In this case, the `watch` property will call a function when an input changes.
 
 Now, since we are making a searcher to search games, we will preload some game data into our `games` property inside the `data` obejct. Copy the following part into your code:
 ```javascript
