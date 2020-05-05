@@ -153,6 +153,8 @@ Now you are ready to go!:sunglasses:
 
 Your final search bar (with CSS) should look something like this!
 
+![](/finalproduct.png)
+
 
 
 ## Summary / What you Learned
