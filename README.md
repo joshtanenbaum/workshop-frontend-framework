@@ -1,8 +1,8 @@
-# CS52 Workshops:  TITLE OF YOUR WORKSHOP
+# CS52 Workshops:  Alternative Frontend Frameworks
 
-![](http://i.giphy.com/eUh8NINbZf9Ys.gif)
+![](https://media.giphy.com/media/l3vQXZiBGhxBEALEk/giphy.gif)
 
-Brief motivation here as well as in presentation
+Frontend Frameworks: A better way to develop applications for the web.
 
 ## Overview
 
@@ -247,11 +247,9 @@ Our final search bar looks like this!
 
 ## Summary / What you Learned
 
-* [ ] can be checkboxes
+* Frontend Frameworks can be very usefull, but also are not mandatory. Choosing to use a Frontend framework and choosing which frontend framework to use are decisions that have to be made at the start of any project based on the requirments of said project.
 
 ## Reflection
-
-*2 questions for the workshop participants to answer (very short answer) when they submit the workshop. These should try to get at something core to the workshop, the what and the why.*
 
 * Would you use a Frontend Framework to make your own personal website? If yes, which one and why?
 * Would you use a Frontend Framework to make a larger web application like your final project? If yes, which one and why?
