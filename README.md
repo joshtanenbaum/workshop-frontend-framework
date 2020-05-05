@@ -126,6 +126,22 @@ watch: {
 
 This part is pretty self-explanatory. Note that we can access the properties in `data` by simply calling `this.` in any part of the `Vue` object. 
 
+Finally, just so we have some results loaded when the page initially loaded, we can add a `mounted()` property that is run when the page initially loads. We'll add a `defaultSearchTerm` variable at the top of the JS file, above the `new Vue` line.
+
+```javascript
+const defaultSearchTerm = 'a';
+```
+
+Next, inside the `Vue` instance, add a mounted property between the `data` and `watch` properties.
+
+```javascript
+    mounted() {
+        axios.get(`https://api.themoviedb.org/3/search/movie?query=${defaultSearchTerm}&api_key=dbc0a6d62448554c27b6167ef7dabb1b`).then(response => {
+            this.movies = response.data.results
+        })
+    },
+```
+
 #### Now, we need to actually render all this good movie data we pulled from the database!
 
 Pretty amazing! Now, finally, we are trying to add the search result display into our html. We need to iterate the `movies` property, which is a list consisting of all the search results, and display the content of it(i.e. title, images, rating, etc). Since this is your first time hanging out with `Vue`, we'll give the secret out.
