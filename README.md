@@ -74,13 +74,17 @@ data: {
     },
  ```
 </details>
-We created a search bar. Here, the `v-model` property in our html is to bind the `searchString` in our `Vue` oject with the html display.
+
+We created a search bar. Here, the `v-model` property in our html is to bind the `searchString` in our `Vue` object with the html display.
 
 #### Next, we need some logic for searching. More specifically, we want to `watch` the input bar for changes so that we know what to search for in the movie database! Where does it happen? If you guessed `watch` property, you are right!
 
-We need to create a function to handle any changes in search input, kind of like event listeners in react. Paste the following code into your `watch` property:
+We need to create a function to handle any changes in search input, kind of like event listeners in react. On each change to the input bar, we want to call this function, which will then pass the updated query to the movie database API and save the results to the `data` property of our `Vue` instance.
+
+First, create a `watch` property that is 
+
 <details>
- <summary>Your data property should look like this now!</summary>
+ <summary>If you get stuck, take a look here. Your data property should look like this now!</summary>
 ```javascript
 watch: {
     'searchString': function(val){
@@ -110,7 +114,7 @@ This part is pretty self-explanatory. But there is a couple things to note: we c
     </ul>
 
 ```
-A couple things need to understand. `v-for` is a for loop (for those of you who've taken CS 10, this is what we called for-each in Java). Now you learned the all the basic. But wait, it doesn't work yet. Remember we initally named the `Vue` object `#main` in `el`? We need to make a binding for that as well. So add these two lines and put your search bar and display components inside this `form`:
+A couple things need to understand. `v-for` is a for loop (for those of you who've taken CS 10, this is what we called for-each in Java).  But wait, it doesn't work yet. Remember we initally named the `Vue` object `#main` in `el`? We need to make a binding for that as well. So add these two lines and put your search bar and display components inside this `form`:
 ```html
 <form id="main" v-cloak>
 </form>
@@ -119,7 +123,7 @@ A couple things need to understand. `v-for` is a for loop (for those of you who'
 Now you are ready to go!:sunglasses: 
 
 
-Our final search bar looks like this!
+Your final search bar (with CSS) should look something like this!
 
 
 
